@@ -1,0 +1,6 @@
+default/sprite/vertex.default.shader
+default/sprite/fragment.default.shader
+default/background/vertex.default.shader
+default/background/fragment.default.shader
+default/decal/vertex.default.shader
+default/decal/fragment.default.shader
