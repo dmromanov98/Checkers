@@ -17,6 +17,15 @@ public class Turn
         return new Turn(x2,y2,x1,y1);
     }
 
+    public int length()
+    {
+        return Math.abs(x1 - x2);
+    }
+
+    public boolean equals(Turn t) {
+        return super.equals(t) || x1 == t.x1 && x2 == t.x2 && y1 == t.y1 && y2 == t.y2;
+    }
+
     @Override
     public String toString() {
         return "From (" + x1 + ", " + y1 + ") to (" + x2 + ", " + y2 + ")";
