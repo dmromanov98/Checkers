@@ -144,19 +144,6 @@ public class Desk extends Map
     public void setCheckerOnCell(Checker checker, int x, int y)
     {
         checker.transform.setPosition(x*checkerSize + startCellsX, y*checkerSize + startCellsY);
-        if (checker.isWhite()){
-            if(y == 7) {
-                checker.changeTyp('W');
-                if (gameInProcess)
-                    logicDesk.set(x,y,'W');
-            }
-        } else {
-            if(y == 0) {
-                checker.changeTyp('B');
-                if (gameInProcess)
-                    logicDesk.set(x,y,'B');
-            }
-        }
     }
 
     private boolean objectIsMoving = false;
@@ -307,7 +294,20 @@ public class Desk extends Map
             if (!from.equals(to)) {
                 Turn t = new Turn(from.x, from.y, to.x, to.y);
                 if (logicDesk.turn(t)) {
-
+                    if (currentChecker.isWhite()){
+                        if(to.y == 7) {
+                            currentChecker.changeTyp('W');
+                            if (gameInProcess)
+                                logicDesk.set(to.x,to.y,'W');
+                        }
+                    } else {
+                        if(to.y == 0) {
+                            currentChecker.changeTyp('B');
+                            if (gameInProcess)
+                                logicDesk.set(to.x,to.y,'B');
+                        }
+                    }
+                    setCheckerOnCell(currentChecker, to.x, to.y);
                 } else {
                     if (currentChecker != null)
                         setCheckerOnCell(currentChecker, from.x, from.y);
