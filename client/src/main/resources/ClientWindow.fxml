@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="pane" alignment="TOP_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="116.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientWindowController">
+    <children>
+
+        <JFXButton fx:id="btnConnectToServer" onAction="#connectToServer" text="Connect to server">
+            <StackPane.margin>
+                <Insets left="400.0" top="50.0" />
+            </StackPane.margin>
+        </JFXButton>
+
+        <JFXTextField fx:id="fieldHostUrl" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="368.0" promptText="Host:" StackPane.alignment="TOP_LEFT">
+            <StackPane.margin>
+                <Insets top="20.0" />
+            </StackPane.margin>
+        </JFXTextField>
+        <Label fx:id="labelStatus" layoutX="10.0" layoutY="80.0" text="Status: Client isn't started">
+            <StackPane.margin>
+                <Insets top="80.0" />
+            </StackPane.margin>
+        </Label>
+    </children>
+</StackPane>
