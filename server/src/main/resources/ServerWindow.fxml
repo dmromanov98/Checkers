@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.StackPane?>
+
+
+<StackPane alignment="TOP_LEFT" fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+           minWidth="-Infinity" prefHeight="353.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/9.0.1"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientWindowController">
+    <children>
+
+        <JFXButton onAction="#startServer" fx:id="btnStartServer" text="Start server">
+            <StackPane.margin>
+                <Insets left="400.0" top="50.0"/>
+            </StackPane.margin>
+        </JFXButton>
+
+        <JFXTextField fx:id="fieldPort" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                      minWidth="-Infinity" promptText="Port:" StackPane.alignment="TOP_LEFT">
+            <StackPane.margin>
+                <Insets top="20.0"/>
+            </StackPane.margin>
+        </JFXTextField>
+
+        <Label fx:id="labelHost" text="HOST:">
+            <StackPane.margin>
+                <Insets top="70.0"/>
+            </StackPane.margin>
+        </Label>
+        <Label fx:id="labelStatus" layoutX="10.0" layoutY="80.0" text="Status: Client isn't started">
+            <StackPane.margin>
+                <Insets top="120.0"/>
+            </StackPane.margin>
+        </Label>
+        <Label fx:id="labelConnectedUsers" layoutX="10.0" layoutY="130.0" text="Connected users: ">
+            <StackPane.margin>
+                <Insets top="170.0"/>
+            </StackPane.margin>
+        </Label>
+
+        <JFXButton layoutX="410.0" layoutY="60.0" onAction="#startGame" text="Start game">
+            <StackPane.margin>
+                <Insets left="400.0" top="100.0"/>
+            </StackPane.margin>
+        </JFXButton>
+    </children>
+</StackPane>

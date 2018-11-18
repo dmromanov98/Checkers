@@ -17,7 +17,6 @@
         <JAVADOC />
         <SOURCES>
           <root url="jar://$MODULE_DIR$/Engine/libs/joml-1.9.4-sources.jar!/" />
-          <root url="jar://$MODULE_DIR$/Engine/libs/joml-1.9.4-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
